@@ -17,7 +17,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@ui5/webcomponents": "^2.16.1",
+    "@ui5/webcomponents-fiori": "^2.16.1",
     "vue": "^3.5.22",
+    "vue-responsive-video-background-player": "^2.4.1",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
