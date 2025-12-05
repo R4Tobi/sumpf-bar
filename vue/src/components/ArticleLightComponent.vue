@@ -4,11 +4,23 @@
         <hr />
         <div class="content">
             <p>
-                Aktuelles Bier: Beispielbier
+                Aktuelles Bier: {{ beer }}<br />
+            </p>
+            <p>
+                Aktuelle Getränke: {{ drinks.join(', ') || 'Keine Getränke verfügbar' }}<br />
+            </p>
+            <p>
+                Aktuelle Snacks: {{ snacks.join(', ') || 'Keine Snacks verfügbar' }}<br />
             </p>
         </div>
     </div>
 </template>
+
+<script setup lang="ts">
+import { getAssortment } from '@/composables/getAssortment';
+
+const { beer, drinks, snacks } = await getAssortment();
+</script>
 
 <style scoped lang="css">
 .wrapper {
