@@ -4,19 +4,20 @@
         <hr />
         <div class="content">
             <div class="row">
-                <p>
-                    Aktuelles Bier: {{ beer }}<br />
-                </p>
+                <div class="column">
+                    <h3>Aktuelles Bier</h3>
+                    <span>{{ beer }}</span>
+                </div>
             </div>
             
             <div class="row">
-                <div>
+                <div class="column">
                     <h3>Aktuelle Getränke</h3>  
-                    {{ drinks.join(', ') || 'Keine Getränke verfügbar' }}<br />
+                    <span v-for="drink in drinks" :key="drink">{{ drink }}</span>
                 </div>
-                <div>
+                <div class="column">
                     <h3>Aktuelle Snacks</h3>
-                    {{ snacks.join(', ') || 'Keine Snacks verfügbar' }}<br />
+                    <span v-for="snack in snacks" :key="snack">{{ snack }}</span>
                 </div>
             </div>
         </div>
@@ -36,7 +37,6 @@ const { beer, drinks, snacks } = await getAssortment();
     align-items: center;
     justify-content: flex-start;
     width: 100vw;
-    height: 100vh;
     margin: 0;
     background-color: #e2e2e2;
     padding: 4rem;
@@ -66,8 +66,15 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 4rem;
+    gap: 8rem;
     width: 100%;
     margin-bottom: 2rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 </style>
