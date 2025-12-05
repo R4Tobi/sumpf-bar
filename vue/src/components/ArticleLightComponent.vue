@@ -3,15 +3,22 @@
         <div class="header">Aktuelles Sortiment</div>
         <hr />
         <div class="content">
-            <p>
-                Aktuelles Bier: {{ beer }}<br />
-            </p>
-            <p>
-                Aktuelle Getränke: {{ drinks.join(', ') || 'Keine Getränke verfügbar' }}<br />
-            </p>
-            <p>
-                Aktuelle Snacks: {{ snacks.join(', ') || 'Keine Snacks verfügbar' }}<br />
-            </p>
+            <div class="row">
+                <p>
+                    Aktuelles Bier: {{ beer }}<br />
+                </p>
+            </div>
+            
+            <div class="row">
+                <div>
+                    <h3>Aktuelle Getränke</h3>  
+                    {{ drinks.join(', ') || 'Keine Getränke verfügbar' }}<br />
+                </div>
+                <div>
+                    <h3>Aktuelle Snacks</h3>
+                    {{ snacks.join(', ') || 'Keine Snacks verfügbar' }}<br />
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -53,5 +60,14 @@ hr {
     font-size: 24pt;
     color: #333333;
     text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 4rem;
+    width: 100%;
+    margin-bottom: 2rem;
 }
 </style>
