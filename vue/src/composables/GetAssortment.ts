@@ -1,7 +1,7 @@
 export async function getAssortment() {
     try {
         // Replace with the URL to the raw file in your Git repository
-        const response = await fetch('https://raw.githubusercontent.com/R4Tobi/sumpf-bar/main/assortment/products.json');
+        const response = await fetch('https://raw.githubusercontent.com/R4Tobi/sumpf-bar/refs/heads/main/assortment/products.json');
         
         if (!response.ok) {
             throw new Error(`Network response was not ok: ${response.statusText}`);
