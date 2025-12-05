@@ -1,5 +1,18 @@
 {
     "beer": "Felsgold",
-    "drinks": [],
-    "snacks": []
+    "drinks": [
+        "Coca Cola",
+        "Coca Cola Zero",
+        "Fritz Kola",
+        "Fritz Kola Classic Light",
+        "Fritz Limo Orange",
+        "Paulaner Spezi"
+    ],
+    "snacks": [
+        "Lorenz Erdnussflips",
+        "Chpsfrisch Ungarisch",
+        "Snickers",
+        "Twix",
+        "Knoppers"
+    ]
 }
