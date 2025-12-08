@@ -66,6 +66,7 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
     gap: 8rem;
     width: 100%;
     margin-bottom: 2rem;
@@ -76,5 +77,23 @@ hr {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 32pt;
+    }
+
+    .row {
+        gap: 2rem;
+    }
+
+    h3{
+        font-size: 20pt;
+    }
+
+    span{
+        font-size: 16pt;
+    }
 }
 </style>
